@@ -6,10 +6,10 @@ import { CurrencyConverterProvider } from './components/CurrencyConverter/Curren
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
+    margin: 0 20%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
   }
+  
 `
 const StyledContainer = styled.div`
   display: flex;
@@ -17,18 +17,6 @@ const StyledContainer = styled.div`
 const StyledApp = styled.div`
   margin: 0;
   height: 100vh;
-  button {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    background-color: black;
-    color: white;
-    border-radius: 25px;
-    font-size: 1.5rem;
-    padding: 10px;
-    cursor: pointer;
-    border: 0;
-  }
 `
 function App() {
 

@@ -10,8 +10,8 @@ const StyledArrowDown = styled(MdKeyboardArrowDown)`
 const StyledDropdown = styled.div`
     width: 300px;
     ${StyledArrowDown} {
-            color: red;
-        }
+            color: darkgray;
+    }
     
     div {
         display: flex;
@@ -21,8 +21,8 @@ const StyledDropdown = styled.div`
         border-radius: 5px;
         border-bottom-left-radius: ${props => props.isOpen ? "0" : "5px"};
         border-bottom-right-radius: ${props => props.isOpen ? "0" : "5px"};
-        border: solid 1px #d3d3d3;
-        border-bottom: ${props => props.isOpen ? "0" : "solid 1px #d3d3d3"};
+        border: solid 1px #ccc;
+        border-bottom: ${props => props.isOpen ? "0" : "solid 1px #ccc"};
         &:hover {
             cursor: pointer;
         }
@@ -33,12 +33,14 @@ const StyledDropdown = styled.div`
         list-style-type: none;
         padding: 0;
         border-radius: 5px;
-        border: solid 1px #d3d3d3;
+        border: solid 1px #ccc;
         border-top: 0;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         max-height: 200px;
+        z-index: 1;
         overflow-y: auto;
+        background-color: white;
         li {
             padding: 5px 10px;
         }
@@ -90,7 +92,7 @@ const Dropdown = forwardRef(({options, callback}, ref) => {
                 <StyledArrowDown/>
             </div>
             { toggled && 
-                <ul>
+                <ul style={{positon: "absolute"}}>
                     <Options></Options>
                 </ul>
             } 
